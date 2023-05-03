@@ -17,6 +17,7 @@
     "eslint": "^8.39.0",
     "eslint-webpack-plugin": "^4.0.1",
     "html-webpack-plugin": "^5.5.1",
+    "lint-staged": "^13.2.2",
     "mini-css-extract-plugin": "^2.7.5",
     "pug": "^2.0.4",
     "pug-loader": "^2.4.0",
@@ -37,5 +38,8 @@
     "hooks": {
       "pre-commit": "npx eslint src/new.ts"
     }
+  },
+  "lint-staged": {
+    "src/new.ts": ["npx eslint src/new.ts"]
   }
 }
