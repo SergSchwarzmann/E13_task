@@ -36,7 +36,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npx eslint src/new.ts"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
