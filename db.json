@@ -1,0 +1,14 @@
+{
+    "Adeptus_Terra": [
+      { "id": 1, "title": "Adeptus Administratum", "master": "Goge Vandire" },
+      { "id": 2, "title": "Astra Militarum", "master": "Lord Commander Militant"},
+      { "id": 3, "title": "Navis Imperialis", "master": "Lord High Admirals"},
+      { "id": 4, "title": "Adeptus Astartes", "master": "Emperor"}
+    ],
+    "Adeptus_Astartes": [
+      { "id": 1, "legio": "Dark Angels", "primapch": "Lion El'Jonson", "adeptusTerraId": 4 },
+      { "id": 3, "legio": "Emperor's Children", "primapch": "Fulgrim", "adeptusTerraId": 4 },
+      { "id": 4, "legio": "Iron Warriors", "primapch": "Perturabo", "adeptusTerraId": 4 }
+    ],
+    "profile": { "name": "Emperor" }
+}

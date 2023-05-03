@@ -7,13 +7,21 @@ const StyleLintPlugin = require('stylelint-webpack-plugin');
 
 // webpack.production.config.js
 module.exports = {
-    mode: 'development',
-    entry: './src/index.js',
+    mode: 'production',
+    entry: './src/new.ts',
     output: {
       filename: 'main.js'
     },
+    devServer: {
+      static: './dist',
+      open: true
+    },
+    stats: 'errors-only',
     plugins: [ new MiniCssExtractPlugin(),
-               new HtmlWebpackPlugin({template: './src/index.pug'}),
+               new HtmlWebpackPlugin({
+                template: './src/index.pug',
+                title: 'Development',
+              }),
                new TerserWebpackPlugin(),
                new CssMinimizerPlugin(),
                new ESLintPlugin(),
