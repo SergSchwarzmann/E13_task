@@ -17,7 +17,7 @@ module.exports = {
       open: true
     },
     stats: "errors-only",
-    plugins: [ new MiniCssExtractPlugin(),
+    plugins: [ new MiniCssExtractPlugin()
                new HtmlWebpackPlugin({
                 template: "./src/index.pug",
                 title: "Development",
