@@ -1,26 +1,26 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const TerserWebpackPlugin = require('terser-webpack-plugin');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
-const ESLintPlugin = require('eslint-webpack-plugin');
-const StyleLintPlugin = require('stylelint-webpack-plugin');
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserWebpackPlugin = require("terser-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const ESLintPlugin = require("eslint-webpack-plugin");
+const StyleLintPlugin = require("stylelint-webpack-plugin");
 
 // webpack.production.config.js
 module.exports = {
-    mode: 'production',
-    entry: './src/new.ts',
+    mode: "production",
+    entry: "./src/new.ts",
     output: {
-      filename: 'main.js'
+      filename: "main.js"
     },
     devServer: {
-      static: './dist',
+      static: "./dist",
       open: true
     },
-    stats: 'errors-only',
+    stats: "errors-only",
     plugins: [ new MiniCssExtractPlugin(),
                new HtmlWebpackPlugin({
-                template: './src/index.pug',
-                title: 'Development',
+                template: "./src/index.pug",
+                title: "Development",
               }),
                new TerserWebpackPlugin(),
                new CssMinimizerPlugin(),
@@ -35,19 +35,19 @@ module.exports = {
           options: {
             esModule: true,
           }
-        }, 'css-loader'],
+        }, "css-loader"],
         test: /\.css$/
       },
       {
         test: /\.pug$/,
-        loader: 'pug-loader',
+        loader: "pug-loader",
         options: {
           pretty: true,
         }
       },
       {
         test: /\.ts$/,
-        use: 'ts-loader'
+        use: "ts-loader"
       },
     ]
     },
