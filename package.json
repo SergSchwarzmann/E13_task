@@ -8,7 +8,8 @@
     "build": "webpack",
     "serve:dev": "webpack serve --config webpack.dev.js",
     "serve:prod": "webpack serve --config webpack.prod.js",
-    "lint": "eslint --debug src/"
+    "lint": "eslint --debug src/",
+    "prepare": "husky install"
   },
   "author": "",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "eslint": "^8.39.0",
     "eslint-webpack-plugin": "^4.0.1",
     "html-webpack-plugin": "^5.5.1",
+    "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "mini-css-extract-plugin": "^2.7.5",
     "pug": "^2.0.4",
@@ -41,6 +43,8 @@
     }
   },
   "lint-staged": {
-    "*.js": ["npm run lint"]
+    "*.js": [
+      "npm run lint"
+    ]
   }
 }
